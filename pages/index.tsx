@@ -134,7 +134,7 @@ const Project = ({
   <div className="px-6 mx-auto sm:px-24 sm:h-112">
     <div className="flex flex-col sm:flex-row sm:max-h-240">
       {/* Left */}
-      <div className="relative self-start order-3 w-full p-10 mr-16 bg-white sm:order-1 sm:w-1/2 sm:hover-bg-animation">
+      <div className="relative self-start order-3 w-full p-10 mr-16 bg-white sm:order-1 sm:w-1/2 hover-bg-animation">
         <div className="text-5xl font-cursive">{title}</div>
         <div className="h-8"></div>
         <div className="text-xl">{description}</div>
@@ -171,7 +171,7 @@ const DownArrow = () => (
 const Projects = () => (
   <section
     id="projects"
-    className="pt-10 sm:pt-8 pb-18 sm:pb-24 bg-alabaster sm:scroll-margin-top-15"
+    className="pt-10 sm:pt-8 pb-18 sm:pb-24 bg-alabaster scroll-margin-top-15"
   >
     <SectionHeader>Projects</SectionHeader>
     <div className="h-3"></div>
@@ -296,7 +296,7 @@ const Footer = () => (
 );
 
 const GetInTouch = () => (
-  <section id="contact" className="py-10 sm:py-14 sm:scroll-margin-top-15">
+  <section id="contact" className="py-10 sm:py-14 scroll-margin-top-15">
     <SectionHeader>Get in Touch</SectionHeader>
     <div className="h-3"></div>
     <DownArrow />
