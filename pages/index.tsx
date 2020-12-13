@@ -230,10 +230,18 @@ const BackToTop = () => (
 );
 
 const socialLinks = [
-  { name: "Behance", url: "https://www.behance.net/ekanshikiran" },
-  { name: "Dribble", url: "https://dribbble.com/ekanshi" },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/ekanshikiran/" },
-  { name: "Email", url: "mailto:ekanshi.design@gmail.com" },
+  {
+    name: "Behance",
+    url: "https://www.behance.net/ekanshikiran",
+    color: "#1769ff",
+  },
+  { name: "Dribble", url: "https://dribbble.com/ekanshi", color: "#1da1f2" },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/ekanshikiran/",
+    color: "#0077b5",
+  },
+  { name: "Email", url: "mailto:ekanshi.design@gmail.com", color: "#ea4335" },
 ];
 
 const Footer = () => (
@@ -241,13 +249,44 @@ const Footer = () => (
     <ul className="flex space-x-16 text-3xl font-bold tracking-wide text-white">
       {socialLinks.map((link) => (
         <li key={link.name}>
-          <a href={link.url} target="_blank" rel="noreferrer noopener">
+          <a
+            className={link.name}
+            // @ts-expect-error
+            style={{ "--hover-color": link.color }}
+            href={link.url}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             {link.name}
           </a>
         </li>
       ))}
     </ul>
     <BackToTop />
+    <style jsx>{`
+      a {
+        position: relative;
+        display: inline-block;
+        color: white;
+        overflow: hidden;
+        background: linear-gradient(
+          to right,
+          var(--hover-color),
+          var(--hover-color) 50%,
+          white 50%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 200ms ease;
+      }
+
+      a:hover {
+        background-position: 0 100%;
+      }
+    `}</style>
   </footer>
 );
 
