@@ -177,19 +177,19 @@ const Projects = () => (
     <Project
       title="Go Flatmates"
       description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-      imageUrl="/images/desktop/project-1.png"
+      imageUrl="/images/desktop/project1.png"
     />
     <div className="h-24"></div>
     <Project
       title="Cron J"
       description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-      imageUrl="/images/desktop/project-2.png"
+      imageUrl="/images/desktop/project2.png"
     />
     <div className="h-24"></div>
     <Project
       title="Quotic"
       description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-      imageUrl="/images/desktop/project-3.png"
+      imageUrl="/images/desktop/project3.png"
     />
     <div className="h-16"></div>
     <div className="flex justify-center ">
