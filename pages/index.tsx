@@ -1,13 +1,20 @@
-// import { useEffect } from "react";
 import Image from "next/image";
 
 const WebHeader = () => (
   <header className="fixed top-0 left-0 z-10 hidden w-full text-sm tracking-wide uppercase border-b-2 border-white header bg-white-70 h-15 sm:block">
     <nav className="h-full">
       <ul className="flex items-center justify-center w-full h-full space-x-36">
-        <li className="relative">Projects</li>
-        <li className="relative">Resume</li>
-        <li className="relative">Contact</li>
+        <li className="relative">
+          <a href="#projects">Projects</a>
+        </li>
+        <li className="relative">
+          <a href="/files/Resume.pdf" target="__blank">
+            Resume
+          </a>
+        </li>
+        <li className="relative">
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
 
@@ -157,7 +164,10 @@ const DownArrow = () => (
   </div>
 );
 const Projects = () => (
-  <section className="pt-8 pb-24 bg-alabaster">
+  <section
+    id="projects"
+    className="pt-8 pb-24 bg-alabaster scroll-margin-top-15"
+  >
     <SectionHeader>Projects</SectionHeader>
     <div className="h-3"></div>
     <DownArrow />
@@ -199,7 +209,7 @@ const Projects = () => (
 const BackToTop = () => (
   <button
     id="scroll-to-top"
-    className="absolute right-0 px-4 py-3 text-white uppercase border border-white mr-18 bottom-1 focus:outline-none"
+    className="absolute bottom-0 right-0 px-4 py-3 text-white uppercase border border-white mr-18 focus:outline-none"
     onClick={() => {
       document.documentElement.scrollTo({
         top: 0,
@@ -242,7 +252,7 @@ const Footer = () => (
 );
 
 const GetInTouch = () => (
-  <section className="py-14">
+  <section id="contact" className="py-14 scroll-margin-top-15">
     <SectionHeader>Get in Touch</SectionHeader>
     <div className="h-3"></div>
     <DownArrow />
@@ -250,19 +260,6 @@ const GetInTouch = () => (
 );
 
 export default function IndexPage() {
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollToTopButton = document.getElementById("scroll-to-top");
-  //     if (window.scrollY > 300) {
-  //       scrollToTopButton.classList.add("block");
-  //     } else {
-  //       scrollToTopButton.classList.remove("block");
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
   return (
     <div className="relative">
       <WebHeader />

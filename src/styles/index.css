@@ -10,9 +10,14 @@ html,
 body {
   @apply text-dove-gray;
   @apply font-sans;
+  scroll-behavior: smooth;
 }
 
 /* Write your own custom component styles here */
+
+.scroll-margin-top-15 {
+  scroll-margin-top: 3.75rem;
+}
 
 /* Start purging... */
 @tailwind utilities;
