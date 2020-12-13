@@ -129,7 +129,7 @@ const Project = ({
   <div className="px-24 mx-auto h-112">
     <div className="flex max-h-240">
       {/* Left */}
-      <div className="self-start w-1/2 p-10 mr-16 bg-white">
+      <div className="relative self-start w-1/2 p-10 mr-16 bg-white hover-bg-animation">
         <div className="text-5xl font-cursive">{title}</div>
         <div className="h-8"></div>
         <div className="text-xl">{description}</div>
@@ -198,7 +198,7 @@ const Projects = () => (
         target="_blank"
         rel="noreferrer noopener"
       >
-        <button className="px-8 py-6 text-base tracking-widest uppercase bg-white border border-powder-blue focus:outline-none hover:bg-powder-blue hover:text-white">
+        <button className="relative px-8 py-6 text-base tracking-widest uppercase bg-white border hover-bg-animation border-powder-blue focus:outline-none hover:text-white">
           View All
         </button>
       </a>

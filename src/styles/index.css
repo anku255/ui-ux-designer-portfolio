@@ -15,6 +15,30 @@ body {
 
 /* Write your own custom component styles here */
 
+.hover-bg-animation {
+  z-index: 1;
+}
+
+.hover-bg-animation:hover {
+  color: white;
+}
+
+.hover-bg-animation:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #b3e5e1;
+  transition: all 0.2s ease-in;
+  z-index: -1;
+}
+
+.hover-bg-animation:hover:before {
+  width: 100%;
+}
+
 .scroll-margin-top-15 {
   scroll-margin-top: 3.75rem;
 }
