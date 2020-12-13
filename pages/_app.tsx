@@ -21,11 +21,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <title>Ekanshi Kiran</title>
       </Head>
       <Component {...pageProps} />
     </div>
