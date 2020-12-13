@@ -1,5 +1,3 @@
-const HEADER_HEIGHT = "60";
-
 const WebHeader = () => (
   <header className="hidden h-15 bg-powder-blue-70 text-sm uppercase tracking-wide border-b-2 border-white sm:block">
     <nav className="h-full">
@@ -32,9 +30,13 @@ const WebHeader = () => (
 const JumboTron = () => (
   <section className="jumbotron bg-powder-blue ">
     <div className="h-16" />
-    <h1 className="text-white text-6xl font-cursive text-center">
+    <h1 className="text-alabaster text-6xl font-cursive text-center">
       Ekanshi Kiran
     </h1>
+    <div className="h-3" />
+    <h2 className="uppercase text-center text-2xl tracking-wider">
+      Product Designer
+    </h2>
 
     <style jsx>{`
       .jumbotron {
@@ -52,6 +54,7 @@ const JumboTron = () => (
   </section>
 );
 
+const Introduction = () => <section className=""></section>;
 export default function IndexPage() {
   return (
     <div>

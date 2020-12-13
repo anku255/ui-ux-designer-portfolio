@@ -26,7 +26,8 @@ module.exports = {
         'alto': '#DEDEDE'
       },
       letterSpacing: {
-        wide: '4.2px'
+        wide: '4.2px',
+        wider: '6.7px'
       },
       opacity: {
         '3': '0.3',
