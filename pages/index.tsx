@@ -43,7 +43,7 @@ const WebHeader = () => (
 );
 
 const JumboTron = () => (
-  <section className="relative pt-15 jumbotron bg-powder-blue">
+  <section className="relative pt-20 sm:pt-15 jumbotron bg-powder-blue">
     <div className="h-16" />
     <h1 className="text-6xl text-center text-alabaster font-cursive">
       Ekanshi Kiran
@@ -53,18 +53,23 @@ const JumboTron = () => (
       Product Designer
     </h2>
 
-    <div className="absolute top-0 left-0 w-full h-full mt-24">
+    <div className="absolute top-0 left-0 sm:w-full sm:h-full sm:mt-24">
+      {/* <img
+        src="/images/mobile/clouds.png"
+        alt="Clouds"
+        className="absolute bottom-0 left-0 w-full h-full sm:object-cover"
+      /> */}
       <Image
         src="/images/desktop/clouds.png"
         alt="Clouds"
         width={1366}
         height={883}
         layout="responsive"
-        className="absolute bottom-0 left-0 object-cover w-full h-full"
+        className="absolute bottom-0 left-0 w-full h-full sm:object-cover"
       />
     </div>
 
-    <div className="absolute left-0 w-full top-64 jumbotron">
+    <div className="absolute left-0 w-full top-72 sm:top-64 jumbotron">
       <div className="flex justify-center transform -translate-x-4">
         <Image
           src="/images/desktop/illustration.png"
@@ -87,9 +92,9 @@ const JumboTron = () => (
 );
 
 const Introduction = () => (
-  <section className="flex pb-24 h-172">
+  <section className="flex flex-col pb-24 sm:flex-row sm:h-172">
     {/* Left */}
-    <div className="flex items-center justify-center w-1/2 h-full">
+    <div className="flex items-center justify-center order-3 w-full h-92 sm:h-full sm:w-1/2 sm:order-1">
       <Image
         src="/images/desktop/ekanshi.png"
         width={419}
@@ -100,7 +105,7 @@ const Introduction = () => (
       />
     </div>
     {/* Right */}
-    <div className="flex flex-col justify-center w-1/2 h-full pr-40">
+    <div className="flex flex-col justify-center order-1 w-full h-full px-12 py-10 text-center sm:w-1/2 sm:py-0 sm:text-left sm:pr-40 sm:pl-0">
       <div className="text-5xl font-cursive">Hello there!</div>
       <div className="h-6"></div>
       <div className="text-xl">
@@ -126,16 +131,16 @@ const Project = ({
   description: string;
   imageUrl: string;
 }) => (
-  <div className="px-24 mx-auto h-112">
-    <div className="flex max-h-240">
+  <div className="px-6 mx-auto sm:px-24 sm:h-112">
+    <div className="flex flex-col sm:flex-row sm:max-h-240">
       {/* Left */}
-      <div className="relative self-start w-1/2 p-10 mr-16 bg-white hover-bg-animation">
+      <div className="relative self-start order-3 w-full p-10 mr-16 bg-white sm:order-1 sm:w-1/2 sm:hover-bg-animation">
         <div className="text-5xl font-cursive">{title}</div>
         <div className="h-8"></div>
         <div className="text-xl">{description}</div>
       </div>
       {/* Right */}
-      <div className="flex justify-center w-1/2">
+      <div className="flex justify-center order-2 w-full mb-6 h-92 sm:mb-0 sm:w-1/2">
         <Image
           src={imageUrl}
           alt={title}
@@ -166,26 +171,26 @@ const DownArrow = () => (
 const Projects = () => (
   <section
     id="projects"
-    className="pt-8 pb-24 bg-alabaster scroll-margin-top-15"
+    className="pt-10 sm:pt-8 pb-18 sm:pb-24 bg-alabaster sm:scroll-margin-top-15"
   >
     <SectionHeader>Projects</SectionHeader>
     <div className="h-3"></div>
     <DownArrow />
 
-    <div className="h-16"></div>
+    <div className="h-10 sm:h-16"></div>
     {/* Projects */}
     <Project
       title="Go Flatmates"
       description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
       imageUrl="/images/desktop/project1.png"
     />
-    <div className="h-24"></div>
+    <div className="h-10 sm:h-24"></div>
     <Project
       title="Cron J"
       description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
       imageUrl="/images/desktop/project2.png"
     />
-    <div className="h-24"></div>
+    <div className="h-10 sm:h-24"></div>
     <Project
       title="Quotic"
       description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
@@ -209,7 +214,7 @@ const Projects = () => (
 const BackToTop = () => (
   <button
     id="scroll-to-top"
-    className="absolute bottom-0 right-0 px-4 py-3 text-white uppercase border border-white mr-18 focus:outline-none"
+    className="absolute bottom-0 right-0 px-4 py-3 text-white uppercase border border-white mr-14 sm:mr-18 focus:outline-none"
     onClick={() => {
       document.documentElement.scrollTo({
         top: 0,
@@ -245,8 +250,8 @@ const socialLinks = [
 ];
 
 const Footer = () => (
-  <footer className="relative flex items-center justify-center bg-powder-blue py-27">
-    <ul className="flex space-x-16 text-3xl font-bold tracking-wide text-white">
+  <footer className="relative flex items-center justify-center py-20 bg-powder-blue sm:py-27 ">
+    <ul className="flex flex-col space-y-10 text-2xl font-bold tracking-wide text-center text-white sm:text-left sm:text-3xl sm:flex-row sm:space-x-16 sm:space-y-0 ">
       {socialLinks.map((link) => (
         <li key={link.name}>
           <a
@@ -291,7 +296,7 @@ const Footer = () => (
 );
 
 const GetInTouch = () => (
-  <section id="contact" className="py-14 scroll-margin-top-15">
+  <section id="contact" className="py-10 sm:py-14 sm:scroll-margin-top-15">
     <SectionHeader>Get in Touch</SectionHeader>
     <div className="h-3"></div>
     <DownArrow />
