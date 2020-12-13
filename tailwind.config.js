@@ -30,7 +30,8 @@ module.exports = {
         'dove-gray': '#707070',
         'alabaster': '#FBFBFB',
         'silver': '#C1C1C1',
-        'alto': '#DEDEDE'
+        'alto': '#DEDEDE',
+        'white-70': 'rgba(255, 255, 255, 0.7)'
       },
       letterSpacing: {
         wide: '4.2px',

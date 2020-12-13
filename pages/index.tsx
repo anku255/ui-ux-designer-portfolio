@@ -2,14 +2,7 @@
 import Image from "next/image";
 
 const WebHeader = () => (
-  <header
-    className="fixed top-0 left-0 z-10 hidden w-full text-sm tracking-wide uppercase border-b-2 border-white h-15 sm:block"
-    style={{
-      backgroundColor: "rgba(255, 255, 255, 0.7)",
-      backgroundImage: "url(/images/drawer/drawer-box.png)",
-      backdropFilter: "blur(3px)",
-    }}
-  >
+  <header className="fixed top-0 left-0 z-10 hidden w-full text-sm tracking-wide uppercase border-b-2 border-white header bg-white-70 h-15 sm:block">
     <nav className="h-full">
       <ul className="flex items-center justify-center w-full h-full space-x-36">
         <li className="relative">Projects</li>
@@ -19,6 +12,11 @@ const WebHeader = () => (
     </nav>
 
     <style jsx>{`
+      .header {
+        background-image: url(/images/drawer/drawer-box.png);
+        backdrop-filter: blur(3px);
+      }
+
       li:before {
         position: absolute;
         bottom: 1px;
@@ -38,7 +36,7 @@ const WebHeader = () => (
 );
 
 const JumboTron = () => (
-  <section className="relative jumbotron bg-powder-blue ">
+  <section className="relative pt-15 jumbotron bg-powder-blue">
     <div className="h-16" />
     <h1 className="text-6xl text-center text-alabaster font-cursive">
       Ekanshi Kiran
@@ -49,19 +47,25 @@ const JumboTron = () => (
     </h2>
 
     <div className="absolute top-0 left-0 w-full h-full mt-24">
-      <img
+      <Image
         src="/images/desktop/clouds.png"
-        alt=""
-        className="absolute bottom-0 left-0 w-full h-full"
+        alt="Clouds"
+        width={1366}
+        height={883}
+        layout="responsive"
+        className="absolute bottom-0 left-0 object-cover w-full h-full"
       />
     </div>
 
-    <div className="absolute left-0 w-full top-44 jumbotron">
+    <div className="absolute left-0 w-full top-64 jumbotron">
       <div className="flex justify-center transform -translate-x-4">
-        <img
+        <Image
           src="/images/desktop/illustration.png"
           alt="Ekanshi Kiran"
-          className="max-w-full"
+          className="max-w-full "
+          width={530}
+          height={409}
+          layout="intrinsic"
         />
       </div>
     </div>
@@ -70,13 +74,6 @@ const JumboTron = () => (
       .jumbotron {
         height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
-      }
-
-      @media (min-width: 640px) {
-        .jumbotron {
-          height: calc(100vh - 60);
-          height: calc(var(--vh, 1vh) * 100 - 60px);
-        }
       }
     `}</style>
   </section>
@@ -222,45 +219,23 @@ const BackToTop = () => (
   </button>
 );
 
+const socialLinks = [
+  { name: "Behance", url: "https://www.behance.net/ekanshikiran" },
+  { name: "Dribble", url: "https://dribbble.com/ekanshi" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/ekanshikiran/" },
+  { name: "Email", url: "mailto:ekanshi.design@gmail.com" },
+];
+
 const Footer = () => (
   <footer className="relative flex items-center justify-center bg-powder-blue py-27">
     <ul className="flex space-x-16 text-3xl font-bold tracking-wide text-white">
-      <li>
-        <a
-          href="https://www.behance.net/ekanshikiran"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Behance
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://dribbble.com/ekanshi"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Dribble
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/ekanshikiran/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          LinkedIn
-        </a>
-      </li>
-      <li>
-        <a
-          href="ekanshi.design@gmail.com"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Email
-        </a>
-      </li>
+      {socialLinks.map((link) => (
+        <li key={link.name}>
+          <a href={link.url} target="_blank" rel="noreferrer noopener">
+            {link.name}
+          </a>
+        </li>
+      ))}
     </ul>
     <BackToTop />
   </footer>
@@ -289,7 +264,7 @@ export default function IndexPage() {
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
   return (
-    <div className="mt-15">
+    <div className="relative">
       <WebHeader />
       <main>
         <JumboTron />
