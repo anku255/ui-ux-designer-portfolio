@@ -2,7 +2,14 @@
 import Image from "next/image";
 
 const WebHeader = () => (
-  <header className="hidden text-sm tracking-wide uppercase border-b-2 border-white h-15 bg-powder-blue-70 sm:block">
+  <header
+    className="fixed top-0 left-0 z-10 hidden w-full text-sm tracking-wide uppercase border-b-2 border-white h-15 sm:block"
+    style={{
+      backgroundColor: "rgba(255, 255, 255, 0.7)",
+      backgroundImage: "url(/images/drawer/drawer-box.png)",
+      backdropFilter: "blur(3px)",
+    }}
+  >
     <nav className="h-full">
       <ul className="flex items-center justify-center w-full h-full space-x-36">
         <li className="relative">Projects</li>
@@ -31,7 +38,7 @@ const WebHeader = () => (
 );
 
 const JumboTron = () => (
-  <section className="jumbotron bg-powder-blue ">
+  <section className="relative jumbotron bg-powder-blue ">
     <div className="h-16" />
     <h1 className="text-6xl text-center text-alabaster font-cursive">
       Ekanshi Kiran
@@ -40,6 +47,24 @@ const JumboTron = () => (
     <h2 className="text-2xl tracking-wider text-center uppercase">
       Product Designer
     </h2>
+
+    <div className="absolute top-0 left-0 w-full h-full mt-24">
+      <img
+        src="/images/desktop/clouds.png"
+        alt=""
+        className="absolute bottom-0 left-0 w-full h-full"
+      />
+    </div>
+
+    <div className="absolute left-0 w-full top-44 jumbotron">
+      <div className="flex justify-center transform -translate-x-4">
+        <img
+          src="/images/desktop/illustration.png"
+          alt="Ekanshi Kiran"
+          className="max-w-full"
+        />
+      </div>
+    </div>
 
     <style jsx>{`
       .jumbotron {
@@ -264,7 +289,7 @@ export default function IndexPage() {
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
   return (
-    <div>
+    <div className="mt-15">
       <WebHeader />
       <main>
         <JumboTron />
