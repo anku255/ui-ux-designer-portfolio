@@ -5,6 +5,13 @@ module.exports = {
     extend: {
       spacing: {
         '15': '3.75rem',
+        '18': '4.5rem',
+        '27': '6.75rem',
+        '112': '28rem',
+        '172': '34rem',
+      },
+      maxHeight: {
+        '240': '60rem'
       },
       fontSize: {
         'text-3xl': '1.75rem',
@@ -27,7 +34,8 @@ module.exports = {
       },
       letterSpacing: {
         wide: '4.2px',
-        wider: '6.7px'
+        wider: '6.7px',
+        widest: '9.6px'
       },
       opacity: {
         '3': '0.3',
