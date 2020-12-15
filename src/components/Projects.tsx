@@ -20,7 +20,7 @@ const Project = ({
         <div className="text-xl">{description}</div>
       </div>
       {/* Right */}
-      <div className="flex justify-center order-2 w-full mb-6 h-92 sm:mb-0 sm:w-1/2">
+      <div className="flex justify-center order-2 w-full h-full mb-6 sm:mb-0 sm:w-1/2 sm:h-1/2">
         <Image
           src={imageUrl}
           alt={title}
