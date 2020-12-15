@@ -1,4 +1,5 @@
-import { useState } from "react";
+import disableScroll from "disable-scroll";
+import { useEffect, useState } from "react";
 
 export const HeaderWeb = () => (
   <header className="fixed top-0 left-0 z-10 hidden w-full text-sm tracking-wide uppercase border-b-2 border-white header bg-white-70 h-15 sm:block">
@@ -46,6 +47,14 @@ const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen((isOpen) => !isOpen);
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      disableScroll.on();
+    } else {
+      disableScroll.off();
+    }
+  }, [isSidebarOpen]);
 
   return (
     <div className="relative sm:hidden">
