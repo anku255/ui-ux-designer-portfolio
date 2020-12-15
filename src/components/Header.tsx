@@ -21,7 +21,6 @@ export const HeaderWeb = () => (
 
     <style jsx>{`
       .header {
-        background-image: url(/images/drawer/drawer-box.png);
         backdrop-filter: blur(3px);
       }
 
@@ -64,7 +63,7 @@ const Sidebar = () => {
         </span>
       </button>
 
-      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+      <div className={`sidebar bg-white-70 ${isSidebarOpen ? "open" : ""}`}>
         <nav className="h-full">
           <ul className="flex flex-col items-center justify-center h-full text-sm tracking-wide uppercase space-y-18">
             <li>
@@ -92,7 +91,6 @@ const Sidebar = () => {
 
       <style jsx>{`
         button {
-          background-image: url(/images/drawer/hamburger.png);
           backdrop-filter: blur(3px);
           opacity: 0.75;
           height: 42px;
@@ -153,8 +151,7 @@ const Sidebar = () => {
           height: 100vh;
           height: calc(100vh - 60);
           height: calc(var(--vh, 1vh) * 100);
-          background: rgba(179, 229, 225, 0.5);
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(3px);
           z-index: 2000;
           transform: translateX(15rem);
           transition: all 0.3s ease-out;
