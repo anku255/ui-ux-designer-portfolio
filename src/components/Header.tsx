@@ -58,7 +58,7 @@ const Sidebar = () => {
 
   return (
     <div className="relative sm:hidden">
-      <button onClick={toggleSidebar}>
+      <button className="bg-white-70" onClick={toggleSidebar}>
         <span className={`hamburger ${isSidebarOpen ? "open" : ""}`}>
           &nbsp;
         </span>
@@ -92,7 +92,8 @@ const Sidebar = () => {
 
       <style jsx>{`
         button {
-          background: rgb(191, 241, 237);
+          background-image: url(/images/drawer/hamburger.png);
+          backdrop-filter: blur(3px);
           opacity: 0.75;
           height: 42px;
           width: 42px;
