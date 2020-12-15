@@ -1,9 +1,9 @@
-import { Footer } from "../src/componets/Footer";
-import { GetInTouch } from "../src/componets/GetInTouch";
-import { Header } from "../src/componets/Header";
-import { Introduction } from "../src/componets/Introduction";
-import { JumboTron } from "../src/componets/Jumbotron";
-import { Projects } from "../src/componets/Projects";
+import { Footer } from "../src/components/Footer";
+import { GetInTouch } from "../src/components/GetInTouch";
+import { Header } from "../src/components/Header";
+import { Introduction } from "../src/components/Introduction";
+import { JumboTron } from "../src/components/Jumbotron";
+import { Projects } from "../src/components/Projects";
 
 export default function IndexPage() {
   return (
