@@ -27,7 +27,7 @@ const socialLinks = [
     url: "https://www.behance.net/ekanshikiran",
     color: "#1769ff",
   },
-  { name: "Dribble", url: "https://dribbble.com/ekanshi", color: "#1da1f2" },
+  { name: "Dribbble", url: "https://dribbble.com/ekanshi", color: "#EA4C89" },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/ekanshikiran/",
