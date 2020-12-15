@@ -16,7 +16,7 @@ body {
 /* Write your own custom component styles here */
 
 .hover-bg-animation {
-  z-index: 1;
+  z-index: 0;
 }
 
 .hover-bg-animation:hover {
