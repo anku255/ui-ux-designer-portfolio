@@ -1,9 +1,12 @@
 import Image from "next/image";
 
 export const Introduction = () => (
-  <section className="flex flex-col pb-24 sm:flex-row sm:h-172">
+  <section
+    className="flex flex-col pb-24 sm:flex-row sm:h-172"
+    style={{ marginTop: "-200px" }}
+  >
     {/* Left */}
-    <div className="flex items-center justify-center order-3 w-full h-92 sm:h-full sm:w-1/2 sm:order-1">
+    <div className="flex items-center justify-center order-3 w-full mt-10 h-92 sm:mt-0 sm:h-full sm:w-1/2 sm:order-1">
       <Image
         src="/images/desktop/ekanshi.png"
         width={419}
