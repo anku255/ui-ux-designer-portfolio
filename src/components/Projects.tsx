@@ -59,7 +59,7 @@ export const Projects = () => (
     />
     <div className="h-10 sm:h-24"></div>
     <Project
-      title="AnkuCodes"
+      title="Codes"
       description="A passionate software engineer portfolio, showing a diverse range of projects and Tech blogs. Check out the live website here."
       imageUrl="/images/desktop/project2.png"
       projectUrl="https://ankucodes.netlify.app/"
