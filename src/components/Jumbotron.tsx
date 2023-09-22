@@ -23,12 +23,12 @@ export const JumboTron = () => {
     >
       <div className="background"></div>
       <div className="h-16" />
-      <h1 className="relative z-30 text-6xl text-center text-alabaster font-cursive ">
+      <h1 className="relative z-30 text-6xl font-bold tracking-wide text-center uppercase text-alabaster font-josephin">
         Ekanshi Kiran
       </h1>
       <div className="h-3 " />
-      <h2 className="relative z-30 text-2xl tracking-wider text-center uppercase ">
-        Product Designer
+      <h2 className="relative z-30 text-2xl font-bold text-center font-baskerville text-powder-blue-dark">
+        Experience Designer
       </h2>
 
       <div
@@ -47,7 +47,7 @@ export const JumboTron = () => {
           left: 0;
           height: 80vh;
           height: calc(var(--vh, 1vh) * 80);
-          background: #b3e5e1;
+          background: var(--powder-blue);
           width: 100%;
           z-index: -1;
         }
@@ -72,7 +72,7 @@ export const JumboTron = () => {
         .illustration {
           width: 100vw;
           height: 70vh;
-          background-color: #b3e5e1;
+          background-color: var(--powder-blue);
           background-image: url(/images/desktop/illustration.png);
           background-repeat: no-repeat;
           background-position: center;

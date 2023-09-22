@@ -25,19 +25,19 @@ const socialLinks = [
   {
     name: "Behance",
     url: "https://www.behance.net/ekanshikiran",
-    color: "#1769ff",
+    color: "#99BCFA",
   },
-  { name: "Dribbble", url: "https://dribbble.com/ekanshi", color: "#EA4C89" },
+  { name: "Dribbble", url: "https://dribbble.com/ekanshi", color: "#FFB8D3" },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/ekanshikiran/",
-    color: "#0077b5",
+    color: "#A3E0FF",
   },
-  { name: "Email", url: "mailto:ekanshi.design@gmail.com", color: "#ea4335" },
+  { name: "Email", url: "mailto:ekanshi.design@gmail.com", color: "#FFA299" },
 ];
 
 export const Footer = () => (
-  <footer className="relative flex items-center justify-center py-20 bg-powder-blue sm:py-27 ">
+  <footer className="relative flex items-center justify-center py-20 bg-powder-blue-dark sm:py-27 ">
     <ul className="flex flex-col space-y-10 text-2xl font-bold tracking-wide text-center text-white sm:text-left sm:text-3xl sm:flex-row sm:space-x-16 sm:space-y-0 ">
       {socialLinks.map((link) => (
         <li key={link.name}>

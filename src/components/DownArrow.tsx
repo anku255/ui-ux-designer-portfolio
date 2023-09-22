@@ -1,7 +1,7 @@
 export const DownArrow = () => (
   <div className="flex justify-center">
     <svg
-      className="text-silver"
+      className="text-powder-blue-dark"
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="8"

@@ -30,7 +30,7 @@ export const HeaderWeb = () => (
         content: "";
         width: 0;
         height: 8px;
-        background: #b3e5e1;
+        background: var(--powder-blue);
         z-index: -1;
         transition: all 0.2s ease-in;
       }

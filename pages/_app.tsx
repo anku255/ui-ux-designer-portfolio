@@ -58,8 +58,14 @@ function MyApp({ Component, pageProps }) {
 
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
         <title>Ekanshi Kiran</title>
