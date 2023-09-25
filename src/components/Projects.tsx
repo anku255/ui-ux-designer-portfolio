@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { DownArrow } from "./DownArrow";
+import { SectionHeading } from "./SectionHeading";
 
 const projects = [
   {
@@ -83,6 +84,7 @@ const Project = ({
             layout="fill"
             objectFit="cover"
             className=""
+            loading="eager"
           />
           <div className={`absolute inset-0 projectDetails`}>
             <div className="absolute text-4xl font-bold tracking-wide uppercase break-words bottom-10 left-10 font-josephin">
@@ -120,9 +122,7 @@ export const Projects = () => (
     id="projects"
     className="pt-14 mt-14 sm:pt-8 pb-18 sm:pb-24 bg-alabaster scroll-margin-top-15"
   >
-    <div className="text-4xl text-center uppercase text-powder-blue-dark font-baskerville">
-      Projects
-    </div>
+    <SectionHeading>Projects</SectionHeading>
     <div className="h-3"></div>
     <DownArrow />
 
@@ -132,6 +132,18 @@ export const Projects = () => (
       {projects.map((project) => (
         <Project key={project.projectUrl} project={project} />
       ))}
+    </div>
+    <div className="h-16"></div>
+    <div className="flex justify-center ">
+      <a
+        href="https://www.behance.net/ekanshikiran"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <button className="relative px-8 py-6 font-sans text-base tracking-widest uppercase bg-white border hover-bg-animation-dark border-powder-blue-dark focus:outline-none hover:text-white">
+          View All
+        </button>
+      </a>
     </div>
   </section>
 );

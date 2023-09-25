@@ -1,7 +1,7 @@
 const BackToTop = () => (
   <button
     id="scroll-to-top"
-    className="absolute bottom-0 right-0 px-4 py-3 text-white uppercase border border-white mr-14 sm:mr-18 focus:outline-none"
+    className="absolute bottom-0 right-0 px-4 py-3 text-white uppercase border border-white mr-14 sm:mr-18 focus:outline-none hover-bg-animation-light"
     onClick={() => {
       document.documentElement.scrollTo({
         top: 0,

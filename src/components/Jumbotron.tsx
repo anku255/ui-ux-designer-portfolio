@@ -17,35 +17,32 @@ export const JumboTron = () => {
     };
   }, []);
   return (
-    <section
-      className="relative pt-20 sm:pt-15 jumbotron rellax"
-      data-rellax-speed={6}
-    >
+    <section className="relative pt-20 sm:pt-15 jumbotron rellax">
       <div className="background"></div>
       <div className="h-16" />
       <h1 className="relative z-30 text-6xl font-bold tracking-wide text-center uppercase text-alabaster font-josephin">
         Ekanshi Kiran
       </h1>
       <div className="h-3 " />
-      <h2 className="relative z-30 text-2xl font-bold text-center font-baskerville text-powder-blue-dark">
+      <h2 className="relative z-30 font-sans text-xl tracking-wide text-center uppercase md:tracking-wider text-powder-blue-dark">
         Experience Designer
       </h2>
 
       <div
-        className="absolute bottom-0 left-0 clouds bg-powder-blue rellax"
-        data-rellax-speed={6}
+        className="absolute left-0 bottom-24 md:bottom-0 clouds bg-powder-blue rellax"
+        data-rellax-speed={2}
+        data-rellax-xs-speed={2}
+        data-rellax-mobile-speed={2}
+        data-rellax-tablet-speed={4}
+        data-rellax-desktop-speed={4}
       />
-      <div
-        className="absolute top-0 left-0 illustration rellax"
-        data-rellax-speed={-6}
-      />
+      <div className="absolute top-0 left-0 illustration rellax" />
 
       <style jsx>{`
         .background {
           position: absolute;
           top: 0;
           left: 0;
-          height: 80vh;
           height: calc(var(--vh, 1vh) * 80);
           background: var(--powder-blue);
           width: 100%;
@@ -53,7 +50,6 @@ export const JumboTron = () => {
         }
 
         .jumbotron {
-          height: 100vh;
           height: calc(calc(var(--vh, 1vh) * 100) + 12rem);
         }
 

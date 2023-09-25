@@ -22,8 +22,7 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Roboto', 'sans-serif'],
-        'josephin': ['Josephin Sans', 'sans-serif'],
-        'baskerville': ['Libre Baskerville', 'serif'],
+        'josephin': ['Josefin Sans', 'sans-serif'],
       },
       colors: {
         'powder-blue': "var(--powder-blue)",
