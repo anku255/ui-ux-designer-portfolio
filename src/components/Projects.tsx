@@ -1,76 +1,138 @@
 import Image from "next/image";
 import Link from "next/link";
 import { DownArrow } from "./DownArrow";
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeading } from "./SectionHeading";
+
+const projects = [
+  {
+    title: "Parking CMS PORTAL",
+    imageUrl: "/images/projects/parking-cms.png",
+    projectUrl: "https://www.behance.net/gallery/136900501/Parking-CMS",
+    color: "#181818",
+  },
+  {
+    title: "Go Flatmate Case Study",
+    imageUrl: "/images/projects/go-flatmates.png",
+    projectUrl:
+      "https://www.behance.net/gallery/102567267/Graduation-project-Goflatmatescom",
+    color: "#4D5BA7",
+  },
+  {
+    title: "Pay App Interface",
+    imageUrl: "/images/projects/pay-application.png",
+    projectUrl: "https://www.behance.net/gallery/98125971/Pay-Application",
+    color: "#2C6DEF",
+  },
+  {
+    title: "E-Learning Platform",
+    imageUrl: "/images/projects/e-learning.png",
+    projectUrl: "https://www.behance.net/gallery/100565297/E-Learning-Website",
+    color: "#77928E",
+  },
+  {
+    title: "Internship Application",
+    imageUrl: "/images/projects/internship-app.png",
+    projectUrl: "https://www.behance.net/gallery/105775643/Internship-App",
+    color: "#14A2E9",
+  },
+  {
+    title: "CronJ Technology",
+    imageUrl: "/images/projects/cronj.png",
+    projectUrl: "https://www.behance.net/gallery/99165633/About-CronJ-Web-Page",
+    color: "#F25868",
+  },
+  {
+    title: "Micro Transaction",
+    imageUrl: "/images/projects/jwellery-website.png",
+    projectUrl: "https://www.behance.net/gallery/98117813/Jewellery-website",
+    color: "#858585",
+  },
+  {
+    title: "Digital Art",
+    imageUrl: "/images/projects/defy-tradition.png",
+    projectUrl: "https://www.behance.net/gallery/67682373/defy-traditions",
+    color: "#7D789B",
+  },
+  {
+    title: "Illustration",
+    imageUrl: "/images/projects/painting.png",
+    projectUrl: "https://www.behance.net/gallery/63798651/painting",
+    color: "#705E50",
+  },
+];
 
 const Project = ({
-  title,
-  description,
-  imageUrl,
-  projectUrl,
+  project: { title, imageUrl, projectUrl, color },
 }: {
-  title: string;
-  description: string;
-  imageUrl: string;
-  projectUrl: string;
-}) => (
-  <Link href={projectUrl}>
-    <a target="_blank" rel="noopener noreferrer">
-      <div className="px-6 mx-auto sm:px-24 sm:h-112">
-        <div className="flex flex-col sm:flex-row sm:max-h-240">
-          {/* Left */}
-          <div className="relative self-start order-3 w-full p-10 mr-16 bg-white sm:order-1 sm:w-1/2 hover-bg-animation">
-            <div className="text-5xl font-cursive">{title}</div>
-            <div className="h-8"></div>
-            <div className="text-xl">{description}</div>
+  project: {
+    title: string;
+    imageUrl: string;
+    projectUrl: string;
+    color: string;
+  };
+}) => {
+  return (
+    <Link href={projectUrl}>
+      <a target="_blank" rel="noopener noreferrer">
+        <div
+          className="relative h-0 group aspect-auto projectContainer"
+          style={{ paddingBottom: "80%" }} // Maintain aspect ratio
+        >
+          <Image
+            src={imageUrl}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className=""
+            loading="eager"
+          />
+          <div className={`absolute inset-0 projectDetails`}>
+            <div className="absolute text-4xl font-bold tracking-wide uppercase break-words bottom-10 left-10 font-josephin">
+              {title}
+            </div>
           </div>
-          {/* Right */}
-          <div className="flex justify-center order-2 w-full h-full mb-6 sm:mb-0 sm:w-1/2 sm:h-1/2">
-            <Image
-              src={imageUrl}
-              alt={title}
-              width={450}
-              height={450}
-              layout="intrinsic"
-            />
-          </div>
+          <style jsx>{`
+            .projectContainer {
+              overflow: hidden;
+            }
+
+            .projectDetails {
+              /* prettier-ignore */
+              background-color: rgba(255,255,255,0.8);
+              transform: scaleX(0); /* Initial scale to 0, hidden */
+              transform-origin: left;
+              transition: transform 0.3s ease-in-out;
+              color: ${color};
+              border: 6px solid ${color};
+            }
+
+            .projectContainer:hover .projectDetails {
+              /* prettier-ignore */
+              transform: scaleX(1);
+            }
+          `}</style>
         </div>
-      </div>
-    </a>
-  </Link>
-);
+      </a>
+    </Link>
+  );
+};
 
 export const Projects = () => (
   <section
     id="projects"
-    className="pt-10 sm:pt-8 pb-18 sm:pb-24 bg-alabaster scroll-margin-top-15"
+    className="pt-14 mt-14 sm:pt-8 pb-18 sm:pb-24 bg-alabaster scroll-margin-top-15"
   >
-    <SectionHeader>Projects</SectionHeader>
+    <SectionHeading>Projects</SectionHeading>
     <div className="h-3"></div>
     <DownArrow />
 
     <div className="h-10 sm:h-16"></div>
     {/* Projects */}
-    <Project
-      title="Go Flatmates"
-      description="AI-powered millennial housing and lifestyle platform that allows users to connect users to connect with the right people at the right location, to solve their housing and living requirements."
-      imageUrl="/images/desktop/project1.png"
-      projectUrl="https://www.behance.net/gallery/102567267/Graduation-project-Goflatmatescom"
-    />
-    <div className="h-10 sm:h-24"></div>
-    <Project
-      title="Codes"
-      description="A passionate software engineer portfolio, showing a diverse range of projects and Tech blogs. Check out the live website here."
-      imageUrl="/images/desktop/project2.png"
-      projectUrl="https://ankucodes.netlify.app/"
-    />
-    <div className="h-10 sm:h-24"></div>
-    <Project
-      title="Quotic"
-      description="A new place to find all your favourite series & movie quotes, or simply find your favorite characters' best dialogues here. Check the live project."
-      imageUrl="/images/desktop/project3.png"
-      projectUrl="https://quotic.vercel.app/"
-    />
+    <div className="grid grid-cols-1 gap-4 mx-auto max-w-7xl sm:grid-cols-2 md:grid-cols-3">
+      {projects.map((project) => (
+        <Project key={project.projectUrl} project={project} />
+      ))}
+    </div>
     <div className="h-16"></div>
     <div className="flex justify-center ">
       <a
@@ -78,7 +140,7 @@ export const Projects = () => (
         target="_blank"
         rel="noreferrer noopener"
       >
-        <button className="relative px-8 py-6 text-base tracking-widest uppercase bg-white border hover-bg-animation border-powder-blue focus:outline-none hover:text-white">
+        <button className="relative px-8 py-6 font-sans text-base tracking-widest uppercase bg-white border hover-bg-animation-dark border-powder-blue-dark focus:outline-none hover:text-white">
           View All
         </button>
       </a>

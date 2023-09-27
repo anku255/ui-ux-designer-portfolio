@@ -17,43 +17,39 @@ export const JumboTron = () => {
     };
   }, []);
   return (
-    <section
-      className="relative pt-20 sm:pt-15 jumbotron rellax"
-      data-rellax-speed={6}
-    >
+    <section className="relative pt-20 sm:pt-15 jumbotron rellax">
       <div className="background"></div>
       <div className="h-16" />
-      <h1 className="relative z-30 text-6xl text-center text-alabaster font-cursive ">
+      <h1 className="relative z-30 text-6xl font-bold tracking-wide text-center uppercase text-alabaster font-josephin">
         Ekanshi Kiran
       </h1>
       <div className="h-3 " />
-      <h2 className="relative z-30 text-2xl tracking-wider text-center uppercase ">
-        Product Designer
+      <h2 className="relative z-30 font-sans text-xl tracking-wide text-center uppercase md:tracking-wider text-powder-blue-dark">
+        Experience Designer
       </h2>
 
       <div
-        className="absolute bottom-0 left-0 clouds bg-powder-blue rellax"
-        data-rellax-speed={6}
+        className="absolute left-0 bottom-24 md:bottom-0 clouds bg-powder-blue rellax"
+        data-rellax-speed={2}
+        data-rellax-xs-speed={2}
+        data-rellax-mobile-speed={2}
+        data-rellax-tablet-speed={4}
+        data-rellax-desktop-speed={4}
       />
-      <div
-        className="absolute top-0 left-0 illustration rellax"
-        data-rellax-speed={-6}
-      />
+      <div className="absolute top-0 left-0 illustration rellax" />
 
       <style jsx>{`
         .background {
           position: absolute;
           top: 0;
           left: 0;
-          height: 80vh;
           height: calc(var(--vh, 1vh) * 80);
-          background: #b3e5e1;
+          background: var(--powder-blue);
           width: 100%;
           z-index: -1;
         }
 
         .jumbotron {
-          height: 100vh;
           height: calc(calc(var(--vh, 1vh) * 100) + 12rem);
         }
 
@@ -72,7 +68,7 @@ export const JumboTron = () => {
         .illustration {
           width: 100vw;
           height: 70vh;
-          background-color: #b3e5e1;
+          background-color: var(--powder-blue);
           background-image: url(/images/desktop/illustration.png);
           background-repeat: no-repeat;
           background-position: center;

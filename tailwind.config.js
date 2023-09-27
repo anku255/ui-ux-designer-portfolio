@@ -22,17 +22,17 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Roboto', 'sans-serif'],
-        'cursive': ['Lobster', 'cursive'],
+        'josephin': ['Josefin Sans', 'sans-serif'],
       },
       colors: {
-        'powder-blue': '#B3E5E1',
-        'powder-blue-70': 'rgba(179, 229, 225, 0.5)',
-        'cutty-sark': '#5A827F4D',
-        'dove-gray': '#707070',
-        'alabaster': '#FBFBFB',
-        'silver': '#C1C1C1',
-        'alto': '#DEDEDE',
-        'white-70': 'rgba(255, 255, 255, 0.7)'
+        'powder-blue': "var(--powder-blue)",
+        'powder-blue-dark': "var(--powder-blue-dark)",
+        'cutty-sark': "var(--cutty-sark)",
+        'dove-gray': "var(--dove-gray)",
+        'alabaster': "var(--alabaster)",
+        'silver': "var(--silver)",
+        'alto': "var(--alto)",
+        'white-70': "var(--white-70)",
       },
       letterSpacing: {
         wide: '4.2px',
